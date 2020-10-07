@@ -1,0 +1,21 @@
+<form #addForm="ngForm" (ngSubmit)="sendNewTask();addForm.reset()">
+  <h2>Add new task</h2>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name </label>
+    <input [(ngModel)]="newTitle" type="text" class="form-control" id="title"name="title"  
+    aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Description</label>
+    <input [(ngModel)]="newDescription" type="text" class="form-control" id="description" name="description">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Image url</label>
+    <input [(ngModel)]="newImage_Url" type="text" class="form-control" id="image" name="image">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Post date</label>
+    <input [(ngModel)]="newDate" type="date" class="form-control" id="date" name="date">
+  </div>
+  <button type="submit" class="btn btn-success">Add Task</button>
+</form>

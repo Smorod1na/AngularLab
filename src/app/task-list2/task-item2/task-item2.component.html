@@ -1,0 +1,11 @@
+<form #addForm="ngForm" (ngSubmit)="doThis(currentTask.name);addForm.reset()">
+<div class="card">
+  <img [src]="currentTask.image_url"  height="400" class="card-img-top" alt="...">
+  <div class="card-body">
+      <h5 class="card-title">{{currentTask.name}}</h5>
+    <p>{{currentTask.description}}</p>
+      <p class="card-text">{{currentTask.dateStarted}}</p>
+      <button type="submit" class="btn btn-primary">Do this</button>
+    </div>
+</div>
+</form>

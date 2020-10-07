@@ -1,0 +1,18 @@
+<form #addForm="ngForm" (ngSubmit)="setAtach(currentTask.name);addForm.reset()">
+  <div class="card">
+    <img [src]="currentTask.image_url"  height="400" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{currentTask.name}}</h5>
+      <p>{{currentTask.description}}</p>
+        <p class="card-text">{{currentTask.dateStarted}}</p>
+        <select *ngIf="states==false" (click)="setAtach(this.$event)">
+          <option selected></option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+        </select>
+        <p  *ngIf="states==true">Attach: {{Atach}}</p>
+      </div>
+  </div>
+  </form>
